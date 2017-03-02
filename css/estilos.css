@@ -1,0 +1,162 @@
+/*------------------------------------------------------*/
+/*----------------Estilos generales----------------------*/
+/*------------------------------------------------------*/
+
+*{
+	padding: 0;
+	margin: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	list-style: none;
+	text-decoration: none;
+}
+
+body{
+	font-family: sans-serif;
+}
+
+/*------------------------------------------------------*/
+/*----------------inicio de slide----------------------*/
+/*------------------------------------------------------*/
+
+.slide{
+	position: relative;
+	margin: auto;
+	width: 100%;
+	overflow: hidden;
+}
+
+.slide ul{
+	position: relative;
+	margin: auto;
+	height: auto;
+	width: 400%;
+	overflow: hidden;
+}
+
+.slide ul li{
+	float: left;
+	width: 25%;
+	height: auto;
+}
+
+.slide ul li img{
+	width: 100%;
+	vertical-align: top;
+	
+}
+
+.slide ul li .caption{
+	position: relative;
+	width: 100%;
+	top: -120px;
+	text-align: center;
+	z-index: 1;
+	color: #fff;
+
+}
+
+.slide ul li .caption h1{
+	background: rgba(255,255,255,.5);
+	padding: 10px 0;
+	font-size: 18px;
+	margin: 0px auto;
+
+}
+
+.slide ul li .caption p{
+	font-size: 16px;
+	background: rgba(255,255,255,.5);
+	padding-bottom: 10px;
+	margin: 0px auto;
+}
+
+.indicadores{
+	position: relative;
+	width: 100%;
+	height: 10px;
+	margin: auto;
+	text-align: center;
+	top: -100px;
+}
+
+.indicadores li{
+	display: inline-block;
+	margin: 0px 5px;
+	cursor: pointer;
+	opacity: .5;
+	color: #fff;
+	text-shadow: 0px 0px 5px #333;
+}
+
+.indicadores li:nth-child(1){
+	opacity: 1;
+}
+
+.left{
+	position: absolute;
+	top: 40%;
+	left: 2%;
+	font-size: 2em;
+	cursor: pointer;
+	color: rgba(255,255,255,.5);
+}
+
+.right{
+	position: absolute;
+	top: 40%;
+	right: 2%;
+	font-size: 2em;
+	cursor: pointer;
+	color: rgba(255,255,255,.5);
+}
+
+.flechas:hover{
+	-webkit-transform: scale(1.08);
+	-ms-transform: scale(1.08);
+	-o-transform: scale(1.08);
+	transform: scale(1.08);
+	text-shadow: 0px 0px 5px #333;
+}
+
+/*------------------------------------------------------*/
+/*----------------Estilos responsive----------------------*/
+/*------------------------------------------------------*/
+
+
+/*-------------------Tamaño grande (Escritorio)-----------------*/
+
+/*@media screen and (min-width: 1200px){
+
+}*/
+
+/*-------------------Tamaño medio (Escritorio)-----------------*/
+
+/*@media (max-width: 1199px) and (min-width: 992px){
+	
+}*/
+
+/*-------------------Tamaño Tablets-----------------*/
+
+@media (max-width: 991px) and (min-width: 768px){
+	.slide ul li .caption{
+		top: -110px;
+	}
+
+	.left,.right{
+		top: 32%;
+	}
+}
+
+/*-------------------Tamaño Móviles-----------------*/
+
+@media screen and (max-width: 767px){
+	.slide ul li .caption{
+		display: none;
+	}
+
+	.indicadores{
+		top: -30px;
+	}
+}
